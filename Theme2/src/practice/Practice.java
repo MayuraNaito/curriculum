@@ -16,16 +16,20 @@
   */
 
 package practice;
+
+//処理クラスをインポート。
 import process.Info;
 
 public class Practice {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
+		//処理クラスをインスタンス化。
 		Info info = new Info();
-		
+
+		//text()メソッドを呼び出す処理。
 		info.text();
+		//date()メソッドを呼び出す処理。
 		info.date();
 	}
-
 }
