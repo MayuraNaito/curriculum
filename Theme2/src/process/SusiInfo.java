@@ -16,30 +16,40 @@
   */
 
 package process;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class Info {
+public class SusiInfo {
 	//カレンダークラスを取得しシステム日時を取得。
 	Calendar cal = Calendar.getInstance();
-	//フォーマットクラス
+	//フォーマットクラスでフォーマット処理。
 	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd H:m:s");
-	//出力用のテキストを格納。
-	String[] text = {
-			"こんにちは！ここは日本です！", 
-			"この寿司はうまい", 
-			"寿司は和食です"
-			};
-	
+	//出力用のテキストフィールドを作成し格納。
+	public String text1 = "こんにちは！ここは日本です！";
+	public String text2 = "この寿司はうまい";
+	public String text3 = "寿司は和食です";
+
 	//テキストを表示するメソッド。
 	public void text() {
-		for(int i = 0; i < text.length; i++) {
-			System.out.println(text[i]);
+		//NULLチェック
+		if (this.text1 == null || this.text2 == null || this.text3 == null) {
+			System.out.println("値がNULLです。");
+		} else {
+			System.out.println(this.text1);
+			System.out.println(this.text2);
+			System.out.println(this.text3);
 		}
 	}
-	
+
 	//日時を表示するメソッド。
 	public void date() {
-		System.out.println(sdf.format(cal.getTime()));
+		//NULLチェック
+		if (this.cal == null) {
+			System.out.println("値がNULLです。");
+		} else {
+			//現在のシステム日時をフォーマットして表示する処理。
+			System.out.println(this.sdf.format(this.cal.getTime()));
+		}
 	}
 }

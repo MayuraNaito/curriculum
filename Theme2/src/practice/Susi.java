@@ -16,16 +16,20 @@
   */
 
 package practice;
-import process.Info;
 
-public class Practice {
+//処理クラスをインポート。
+import process.SusiInfo;
+
+public class Susi {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-		Info info = new Info();
-		
-		info.text();
-		info.date();
-	}
+		//処理クラスをインスタンス化。
+		SusiInfo susi = new SusiInfo();
 
+		//text()メソッドを呼び出す処理。
+		susi.text();
+		//date()メソッドを呼び出す処理。
+		susi.date();
+	}
 }
